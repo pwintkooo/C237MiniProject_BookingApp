@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Booking Courts App</title>
+</head>
+<body>
+    <%- include ('partials/navbar.ejs', {showSearch: false}) %>
+    <% for (let i=0; i < relatedSports.length; i++) { %>
+        <div class="container mt-3">
+            <div class="card" style="background-color: #e0efe4;">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img src="/images/<%= relatedSports[i].img %>" alt="<%= relatedSports[i].name %>" class="img-fluid">
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="container mt-3">
+                            <div class="card-body">
+                                <h4 class="text-danger"><%= relatedSports[i].name %></h4><br>
+                                <button type="button" class="btn btn-dark"><a href="/schedules/<%= sportCentreId %>/<%= relatedSports[i].sportId %>" 
+                                    style="text-decoration: none; color: white;">View Schedules</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% } %>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Booking Courts App</title>
+</head>
+<body>
+    <%- include ('partials/navbar.ejs', {showSearch: false}) %>
+    <div class="container mt-3">
+        <h2>Add Booking</h2>
+        <form action="/bookings/<%= booking.centreId %>/<%= booking.sportId %>/<%= booking.scheId %>" method="post">
+            <div class="mb-3 mt-3">
+                <label for="name">Player Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter player name" name="name" required>
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="email">Email Address:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email address" name="email" required>
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="location">Sport Centre:</label>
+                <input type="text" class="form-control" id="location" value="<%= booking.centrename %>" name="location" readonly>
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="sport">Sport:</label>
+                <input type="text" class="form-control" id="sport" value="<%= booking.name %>" name="sport" readonly>
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="date">Date:</label>
+                <input type="date" class="form-control" id="date" value="<%= booking.date %>" name="date" readonly>
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="slot">Time Slot:</label>
+                <input type="text" class="form-control" id="slot" value="<%= booking.time %>" name="slot" readonly>
+            </div>
+            <button type="submit" class="btn btn-dark" style="color: white;">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

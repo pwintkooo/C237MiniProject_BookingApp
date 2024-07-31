@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color:  #008B8B;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Booking Courts App</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav me-auto"> <!--make the search bar move to the left -->
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/bookings">View Booking</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/aboutUs">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contactUs">Contact Us</a>
+            </li>
+            </ul>
+            <% if (showSearch) { %>
+                <form class="d-flex" action="/search" method="get">
+                    <input class="form-control me-2" type="text" placeholder="Search" name="query">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+            <% } %>
+        </div>
+    </div>
+</nav>

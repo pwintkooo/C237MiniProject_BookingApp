@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Booking Courts App</title>
+</head>
+<body>
+    <%- include ('partials/navbar.ejs', {showSearch: false}) %>
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+        
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="/images/badmintoncaro.jpg" alt="Badminton" class="img-fluid" style="width: 100%; height: 90.5vh"></div>
+        <div class="carousel-item">
+            <img src="/images/swimmingcaro.jpg" alt="Swimming" class="img-fluid" style="width: 100%; height: 90.5vh">
+        </div>
+        <div class="carousel-item">
+            <img src="/images/gymcaro.jpg" alt="Gym" class="img-fluid" style="width: 100%; height: 90.5vh">
+        </div>
+        </div>
+        
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <div class="container mt-3">
+        <h3>Welcome to Booking Courts App</h3>
+        <p>We are a dedicated team of sports enthusiasts, tech experts, and customer service professionals 
+            who understand the importance of seamless access to sports facilities. Our mission is to make 
+            it easier for everyone to book courts for their favorite sports with just a few clicks.</p>
+        <h3>Why Choose Us?</h3>
+        <ul>
+            <li>Easy to use: Our app is designed with simplicity in mind. Find, book, and manage your 
+                court reservations with just a few taps.</li>
+            <li>Real-Time Availability: Check real-time availability to ensure you can book the court 
+                you want, when you want it.</li>
+            <li>Courts Availablity: Our courts are available from 7AM to 10PM everyday.</li>
+        </ul>
+        <h3>Join Our Community</h3>
+        <p>We are more than just a booking app. Players can make friends and join social community.</p>
+        <h3>Contact Us</h3>
+        <p>Reach out to us at <a href="/contactUs">Contact Information</a>.</p>
+    </div>
+</body>
+</html>
