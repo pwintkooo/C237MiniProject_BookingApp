@@ -17,10 +17,14 @@ const connection = mysql.createConnection({
     password: '',
     database: 'booking_courts_app'
     }); */
-    host: 'sql.freedb.tech',
+    /* host: 'sql.freedb.tech',
     user: 'freedb_C237_pwintkooo',
     password: 'a6k5#rjeJ#qk#mP',
-    database: 'freedb_booking_courts_app'
+    database: 'freedb_booking_courts_app' */
+    host: 'db4free.net',
+    user: 'c237_project',
+    password: '123456789',
+    database: 'bookingcourts'
     });
     connection.connect((err) => {
     if (err) {
