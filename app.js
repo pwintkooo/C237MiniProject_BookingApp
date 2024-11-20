@@ -129,7 +129,7 @@ app.get("/bookings/:centreId/:sportId/:scheId", function(req, res) {
     const scheId = parseInt(req.params.scheId);
 
     let query = `SELECT * FROM sportcentres_details
-                 INNER JOIN sportcentres ON sportscentres_details.centreId = sportcentres.centreId
+                 INNER JOIN sportcentres ON sportcentres_details.centreId = sportcentres.centreId
                  INNER JOIN sports ON sportcentres_details.sportId = sports.sportId
                  INNER JOIN schedules ON sportcentres_details.scheId = schedules.scheId
                  WHERE sportcentres_details.centreId = ? AND sportcentres_details.sportId = ? AND sportcentres_details.scheId = ?`;
